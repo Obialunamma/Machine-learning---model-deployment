@@ -13,7 +13,7 @@ d = pd.read_csv('Customer_churn/data/Telco-Customer-Churn.csv')
 d.drop(["customerID"], axis = 1, inplace = True) # irrelevant column
 
 d['TotalCharges'] = pd.to_numeric(d['TotalCharges'], errors='coerce')
-
+d = d.dropna()
 
 encoders = {}
 
@@ -51,5 +51,5 @@ svc.predict(x_test_scale)
 accuracy_score(svc.predict(x_test_scale), y_test)
 
 # Save the trained model and encoders
-joblib.dump(svc, filename="model/model.pkl")
-joblib.dump(encoders, "model/encoders.pkl")
+# joblib.dump(svc, filename="model/model.pkl")
+# joblib.dump(encoders, "model/encoders.pkl")
