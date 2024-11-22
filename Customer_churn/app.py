@@ -4,8 +4,8 @@ import pandas as pd
 import joblib
 
 # load trained model and encode
-model = joblib.load("model/model.pkl")
-encoders = joblib.load("model/encoders.pkl")
+model = joblib.load("Customer_churn/model/model.pkl")
+encoders = joblib.load("Customer_churn/model/encoders.pkl")
 
 #title
 st.title("Customer Churn Prediction")
