@@ -7,7 +7,7 @@ from sklearn.metrics import accuracy_score, confusion_matrix, ConfusionMatrixDis
 import joblib
 
 # load data
-d = pd.read_csv('data/Telco-Customer-Churn.csv') 
+d = pd.read_csv('Customer_churn/data/Telco-Customer-Churn.csv') 
 
 # Preprocessing
 d.drop(["customerID"], axis = 1, inplace = True) # irrelevant column
